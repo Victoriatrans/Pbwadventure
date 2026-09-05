@@ -182,6 +182,31 @@
         <div class="contact"><b>Meeting Point</b><br>Bekasi • Jakarta • Cikarang • Karawang</div>
       </div>
     </div>
+
+    <div class="fac-card" style="margin-top:24px">
+      <h3>Barang pribadi yang wajib dibawa</h3>
+      <ul>
+        <li>Tas Ceriel / daypack</li>
+        <li>trekking pole</li>
+        <li>Sepatu & sandal</li>
+        <li>topi / penutup kepala & buff</li>
+        <li>Air mineral pribadi 2 botol uk. 1,5Lt</li>
+        <li>jaket</li>
+        <li>baju&celana trekking</li>
+        <li>Baju ganti</li>
+        <li>Slepeng bag</li>
+        <li>Matras</li>
+        <li>Headlamp/senter</li>
+        <li>jas hujan/payung</li>
+      </ul>
+      <h3 style="margin-top:28px">OPSIONAL</h3>
+      <ul>
+        <li>Alat sholat</li>
+        <li>Alat mandi</li>
+        <li>obat obatan pribadi jika ada penyakit kkhusu</li>
+        <li>Hydropack untuk summit</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -214,6 +239,33 @@
           <div class="two">
             <div><label for="nama">Nama</label><input id="nama" name="nama" required placeholder="Nama lengkap"></div>
             <div><label for="hp">No. HP</label><input id="hp" name="hp" required inputmode="tel" placeholder="08xxxxxxxxxx"></div>
+          </div>
+          <div class="two">
+            <div><label for="tanggal_lahir">Tanggal Lahir</label><input id="tanggal_lahir" name="tanggal_lahir" type="date"></div>
+            <div><label for="wa_keluarga">No WA Keluarga</label><input id="wa_keluarga" name="wa_keluarga" inputmode="tel" placeholder="08xxxxxxxxxx"></div>
+          </div>
+          <div class="two">
+            <div><label for="instagram">Instagram</label><input id="instagram" name="instagram" placeholder="@username"></div>
+            <div><label for="email">Email Aktif</label><input id="email" name="email" type="email" placeholder="nama@email.com"></div>
+          </div>
+          <div><label for="riwayat_penyakit">Riwayat penyakit</label><textarea id="riwayat_penyakit" name="riwayat_penyakit" rows="2" placeholder="Tuliskan jika ada, atau isi -"></textarea></div>
+          <div><label for="penglihatan">Penglihatan</label>
+            <select id="penglihatan" name="penglihatan">
+              <option value="">Pilih kondisi penglihatan</option>
+              <option>Normal</option><option>+,- silinder</option><option>rabun senja</option>
+            </select>
+          </div>
+          <div><label for="sumber_info">Sumber Info trip PBW ADVENTURE</label>
+            <select id="sumber_info" name="sumber_info">
+              <option value="">Pilih sumber info</option>
+              <option>instagram</option><option>tiktok</option><option>teman</option>
+            </select>
+          </div>
+          <div><label for="pengalaman_mendaki">Pengalaman Mendaki</label><textarea id="pengalaman_mendaki" name="pengalaman_mendaki" rows="2" placeholder="Tuliskan pengalaman mendaki"></textarea></div>
+          <div><label for="khusus_rinjani_merbabu">Khusus Rinjani, Merbabu</label><textarea id="khusus_rinjani_merbabu" name="khusus_rinjani_merbabu" rows="2" placeholder="Isi jika memilih Rinjani / Merbabu"></textarea></div>
+          <div class="two">
+            <div><label for="tinggi_badan">Tinggi badan</label><input id="tinggi_badan" name="tinggi_badan" placeholder="Contoh: 170 cm"></div>
+            <div><label for="berat_badan">Berat Badan</label><input id="berat_badan" name="berat_badan" placeholder="Contoh: 65 kg"></div>
           </div>
           <div><label for="mepo">Mepo (Meeting Point)</label>
             <select id="mepo" name="mepo" required>
@@ -269,6 +321,17 @@
 
 Nama: ${data.get('nama')}
 No. HP: ${data.get('hp')}
+Tanggal Lahir: ${data.get('tanggal_lahir') || '-'}
+No WA Keluarga: ${data.get('wa_keluarga') || '-'}
+Instagram: ${data.get('instagram') || '-'}
+Email Aktif: ${data.get('email') || '-'}
+Riwayat penyakit: ${data.get('riwayat_penyakit') || '-'}
+Penglihatan: ${data.get('penglihatan') || '-'}
+Sumber Info trip PBW ADVENTURE: ${data.get('sumber_info') || '-'}
+Pengalaman Mendaki: ${data.get('pengalaman_mendaki') || '-'}
+Khusus Rinjani, Merbabu: ${data.get('khusus_rinjani_merbabu') || '-'}
+Tinggi badan: ${data.get('tinggi_badan') || '-'}
+Berat Badan: ${data.get('berat_badan') || '-'}
 Mepo: ${data.get('mepo')}
 Camp Trip: ${data.get('trip')}
 Paket: ${data.get('paket')}
